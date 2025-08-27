@@ -60,5 +60,3 @@ I tested the project with two different workloads:
 **Web Worker**
 ![60M Web Worker](/images/60M-worker.png)
 
-
-Add your screenshots here:  
