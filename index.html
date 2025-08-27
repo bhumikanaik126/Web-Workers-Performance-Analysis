@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Worker Performance Test</title>
+  <style>
+    #progressBar {
+      width: 100%;
+      background: #ddd;
+      height: 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    #progressFill {
+      height: 100%;
+      width: 0%;
+      background: #4caf50;
+      border-radius: 10px;
+      transition: width 0.1s;
+    }
+    #fps {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web Worker Performance Demo</h1>
+
+  <input type="number" id="limit" placeholder="Enter a number (e.g. 50000)" />
+  <br><br>
+  <button id="mainThreadBtn">Run on Main Thread</button>
+  <button id="workerBtn">Run with Web Worker</button>
+
+  <div id="progressBar">
+    <div id="progressFill"></div>
+  </div>
+
+  <p id="status">Status: Idle</p>
+  <p id="time"></p>
+  <p id="fps">FPS: calculating...</p>
+
+  <script src="fps.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
